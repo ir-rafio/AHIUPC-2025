@@ -151,7 +151,7 @@ Focus on a single string; all strings behave the same due to symmetry.
 <details>
 <summary>Hint 2</summary>
 
-After rotation by $\theta$, how far apart are the two attachment points around the rim? Think about the chord length of a circle of radius $r$.
+After rotation by $\theta$, how far apart are the two attachment points around the capacitor? Think about the chord length of a circle of radius $r$.
 
 </details>
 
@@ -181,7 +181,7 @@ Consider the two attachment points on the edges after rotation. Both points lie 
 $x = \sqrt{r^2 + r^2 - 2r^2 \cos\theta} = \sqrt{2r^2 (1 - \cos\theta)}$
 
 Now, each string forms the hypotenuse of a right triangle whose legs are:
-* the distance between the two rim points, $x$, and
+* the distance between the two points on the capacitor's edge, $x$, and
 * the distance between the plates, $d$.
 
 Thus, by Pythagoras' theorem, $L^2 = d^2 + x^2$.
@@ -192,7 +192,7 @@ $L^2 = d^2 + 2r^2(1 - \cos\theta)$
 
 Rearranging for $d$, we get,
 
-$\boxed{\,d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}\,}$
+$\boxed{d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}}$
 
 This is the required distance between the plates.
 
