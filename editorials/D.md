@@ -37,7 +37,7 @@ Be careful with angle units. Most programming languages expect trigonometric fun
 
 The problem is essentially geometric. We are dealing with two circular plates of a capacitor, each with radius $r$, connected by several strings of equal length $L$. When the $+ve$ plate is rotated by an angle $\theta$, we need to compute the resulting distance $d$ between the plates. Each string connects two corresponding points on the edges of the two plates. Before rotation, the endpoints of a string align along the same radius. After rotating the $+ve$ plate by $\theta$, the two endpoints of a string on the two plates are no longer aligned but are separated by an angular difference of $\theta$.
 
-![dic_pic](images/DIC_solution4.png)
+![dic_pic](https://raw.githubusercontent.com/ir-rafio/AHIUPC-2025-Problemset/refs/heads/main/images/DIC_solution4.png)
 
 Consider the two attachment points on the edges after rotation. Both points lie on a circle of radius $r$ centered at the axis of rotation, but separated by angle $\theta$. Hence, the distance $x$ between these two points is the chord length of a circle which can be obtained by the cosine rule of triangles as follows,
 
