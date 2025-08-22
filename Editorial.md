@@ -53,23 +53,20 @@ If a vampire can meet Pacman at an earlier cell, then by following the same move
 
 This observation reduces the problem to comparing distances. Since both Pacman and the vampires move one cell per turn, a vampire can bite Pacman if and only if its distance to the food cell is less than or equal to Pacman's distance to the food cell.
 
-To check this efficiently, you can run a BFS from the food cell. This gives the distance from the food to every other cell in the grid. Let $dP = \text{distance from Pacman's starting cell to the food}$ and $dV_i = \text{distance from the starting cell of the i-th Vampire to the food}$. The i-th vampire can successfully bite Pacman if and only if $dV_i \le dP$.
+To check this efficiently, you can run a BFS from the food cell. This gives the distance from the food to every other cell in the grid. Let $dP = \text{distance from Pacman's starting cell to the food}$ and $dV_i = \text{distance from the starting cell of the $i$-th vampire to the food}$. The $i$-th vampire can successfully bite Pacman if and only if $dV_i \le dP$.
 
 Finally, Pacman always gains $+500$ points for eating the food, and loses $10$ points for each vampire that manages to bite. Let the number of vampires that can bite Pacman be $B$. The optimal score is: $500 - 10B$.
 
-The following is a compact version of this inference:  
-$$
-\text{Optimal Score} 
- = 500 - 10 \cdot \bigl|\{ \text{Vampires that can bite Pacman in an optimal play} \}\bigr| \\
- = 500 - 10 \cdot \bigl|\{ \text{Vampires that can meet Pacman before he exits} \}\bigr| \\
- = 500 - 10 \cdot \bigl|\{ \text{Vampires that can meet Pacman at the food cell} \}\bigr| \\
- = 500 - 10 \cdot \bigl|\{ \text{Vampires that can reach the food cell before Pacman or at the same turn} \}\bigr| \\
- = 500 - 10 \cdot \left|\left\{ V_i \;\middle|\; d(V_i,\text{food}) \le d(P,\text{food}) \right\}\right|
-$$
+The following is a compact formulation of the inference:  
+Optimal Score $= 500 - 10 \times |\\{ \text{Vampires that can bite Pacman in an optimal play} \\} |$  
+ $= 500 - 10 \times |\\{ \text{Vampires that can meet Pacman before he exits} \\} |$  
+ $= 500 - 10 \times |\\{ \text{Vampires that can meet Pacman at the food cell} \\} |$  
+ $= 500 - 10 \times |\\{ \text{Vampires that can reach the food cell before Pacman or on the same turn} \\} |$  
+ $= 500 - 10 \times |\\{ i : dV_i \le dP \\} |$
 
-However, this is an evil problem. Every statement written till now had a hidden assumption: Pacman can reach the food and exit the game. However, because of the walls, this may not be true. In that scenario, all the vampires that are in the same component as Pacman can bite Pacman. The optimal score will then be: $-10B$.
-
-To find $B$, you have to run DFS/BFS from Pacman's initial cell and count how many vampires are in the same component.
+However, this is an **evil problem**. Every statement written till now had a hidden assumption: Pacman can reach the food and exit the game.  
+However, because of the walls, this may not be true. It is possible that Pacman and the food are in separate components. In that scenario, all the vampires that are in the same component as Pacman can bite Pacman as the game won't end untill $10^7$ turns. The optimal score will then be: $-10B$.  
+To find $B$, you can run DFS/BFS from Pacman's initial cell and count how many vampires are in the same component.
 
 Time Complexity = $\mathcal{O}(nm)$
 
