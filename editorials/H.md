@@ -134,7 +134,7 @@ void pre()
 {
     fastio;
 
-    
+
 }
 
 void solve(int tc)
@@ -166,7 +166,7 @@ int main()
 
     int tc, tt = 1;
     cin >> tt;
-    
+
     for(tc = 1; tc <= tt; tc++)
     {
         // cout << "Case " << tc << ": ";
@@ -180,4 +180,17 @@ int main()
 
 </details>
 </details>
+</details>
+
+<details>
+<summary>Bonus Problem</summary>
+
+Pythagoras has become even more picky and will now only play with right triangluar toys that have an **integer** altitude to the hypotenuse. Here, the altitude to the hypotenuse means the length of the perpendicular drawn from the right angle of a right triangle to the hypotenuse.
+
+For example, in the following figure, $h$ is the altitude to the hypotenuse:
+
+![triangle](./images/altitude.png)
+
+Now count the number of toys that Pythagoras will buy.
+
 </details>
