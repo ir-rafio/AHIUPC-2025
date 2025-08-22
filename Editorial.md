@@ -151,7 +151,7 @@ Focus on a single string; all strings behave the same due to symmetry.
 <details>
 <summary>Hint 2</summary>
 
-After rotation by $\theta$, how far apart are the two attachment points around the capacitor? Think about the chord length of a circle of radius $r$.
+After rotation by $\theta$, how far apart are the two attachment points around the $+ve$ plate? Think about the chord length of a circle of radius $r$.
 
 </details>
 
@@ -171,7 +171,7 @@ Be careful with angle units. Most programming languages expect trigonometric fun
 <details>
 <summary>Solution</summary>
 
-The problem is essentially geometric. We are dealing with two circular plates of a capacitor, each with radius $r$, connected by several strings of equal length $L$. When the $+ve$ plate is rotated by an angle $\theta$, we need to compute the resulting distance $d$ between the plates. Each string connects two corresponding points on the edges of the two plates. Before rotation, the endpoints of a string align along the same radius. After rotating the $+ve$ plate by $\theta$, the two endpoints of a string on the two capacitors are no longer aligned but are separated by an angular difference of $\theta$.
+The problem is essentially geometric. We are dealing with two circular plates of a capacitor, each with radius $r$, connected by several strings of equal length $L$. When the $+ve$ plate is rotated by an angle $\theta$, we need to compute the resulting distance $d$ between the plates. Each string connects two corresponding points on the edges of the two plates. Before rotation, the endpoints of a string align along the same radius. After rotating the $+ve$ plate by $\theta$, the two endpoints of a string on the two plates are no longer aligned but are separated by an angular difference of $\theta$.
 
 ![dic_pic](images/DIC_solution4.png)
 
@@ -181,7 +181,7 @@ Consider the two attachment points on the edges after rotation. Both points lie 
 $x = \sqrt{r^2 + r^2 - 2r^2 \cos\theta} = \sqrt{2r^2 (1 - \cos\theta)}$
 
 Now, each string forms the hypotenuse of a right triangle whose legs are:
-* the distance between the two points on the capacitor's edge, $x$, and
+* the distance between the two points on the $+ve$ plate's edge, $x$, and
 * the distance between the plates, $d$.
 
 Thus, by Pythagoras' theorem, $L^2 = d^2 + x^2$.
