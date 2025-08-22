@@ -68,7 +68,7 @@ This is the required distance between the plates.
 using namespace std;
 
 #define SQR(a)                  ((a)*(a))
-#define Godspeed                ios_base::sync_with_stdi\mathcal{O}(0);cin.tie(NULL)
+#define Godspeed                ios_base::sync_with_stdio(0);cin.tie(NULL)
 #define urs(r...)               typename decay<decltype(r)>::type
 #define REP(i,b)                for(urs(b) i=0;i<b;i++)
 #define all(a)                  a.begin(),a.end()
