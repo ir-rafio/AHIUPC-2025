@@ -136,11 +136,12 @@ Code
 <details>
 <summary>Problem D - Disruptor's Incapacitated Capacitor</summary>
 
+Problem Setter: [Syed Rifat Raiyan](https://codeforces.com/profile/Starscream-11813)  
 Estimated Difficulty: 1400  
 Tag(s): Geometry
 
 <details>
-<<<<<<< HEAD
+
 <summary>Hint 1</summary>
 
 Focus on a single string; all strings behave the same due to symmetry.
@@ -164,21 +165,17 @@ Once you know this lateral distance, combine it with the unknown plate separatio
 <details>
 <summary>Hint 4</summary>
 Be careful with angle units. Most programming languages expect trigonometric functions to use radians, not degrees.
-=======
-<summary>Hint</summary>
-Hint
->>>>>>> 2445fad690c5b0c6306e5d895d3b82e5179d6144
 
 </details>
 
 <details>
 <summary>Solution</summary>
 
-The problem is essentially geometric. We are dealing with two circular plates of a capacitor, each with radius $r$, connected by several strings of equal length $L$. When the $+ve$ plate is rotated by an angle $\theta$, we need to compute the resulting distance $d$ between the plates. Each string connects two corresponding points on the rims of the two plates. Before rotation, the endpoints of a string align along the same radius. After rotating the $+ve$ plate by $\theta$, the two endpoints of a string on the two rims are no longer aligned but are separated by an angular difference of $\theta$.
+The problem is essentially geometric. We are dealing with two circular plates of a capacitor, each with radius $r$, connected by several strings of equal length $L$. When the $+ve$ plate is rotated by an angle $\theta$, we need to compute the resulting distance $d$ between the plates. Each string connects two corresponding points on the edges of the two plates. Before rotation, the endpoints of a string align along the same radius. After rotating the $+ve$ plate by $\theta$, the two endpoints of a string on the two capacitors are no longer aligned but are separated by an angular difference of $\theta$.
 
 ![dic_pic](images/DIC_solution3.png)
 
-Consider the two attachment points on the rims after rotation. Both points lie on a circle of radius $r$ centered at the axis of rotation, but separated by angle $\theta$. Hence, the distance $x$ between these two points (measured along the rim) is the chord length of a circle which can be obtained by the cosine rule of triangles as follows,
+Consider the two attachment points on the edges after rotation. Both points lie on a circle of radius $r$ centered at the axis of rotation, but separated by angle $\theta$. Hence, the distance $x$ between these two points is the chord length of a circle which can be obtained by the cosine rule of triangles as follows,
 
 
 $x = \sqrt{r^2 + r^2 - 2r^2 \cos\theta} = \sqrt{2r^2 (1 - \cos\theta)}$
@@ -187,24 +184,18 @@ Now, each string forms the hypotenuse of a right triangle whose legs are:
 * the distance between the two rim points, $x$, and
 * the distance between the plates, $d$.
 
-Thus, by Pythagoras:
-$
-L^2 = d^2 + x^2.
-$
+Thus, by Pythagoras' theorem, $L^2 = d^2 + x^2$.
 
 Substituting $x^2 = 2r^2(1 - \cos\theta)$ gives,
 
-$
-L^2 = d^2 + 2r^2(1 - \cos\theta).
-$
+$L^2 = d^2 + 2r^2(1 - \cos\theta)$
 
 Rearranging for $d$, we get,
 
-$
-\boxed{\,d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}\,}
-$
+$\boxed{\,d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}\,}$
 
 This is the required distance between the plates.
+
 <details>
 <summary>Code</summary>
 
