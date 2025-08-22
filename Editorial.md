@@ -136,12 +136,31 @@ Code
 <details>
 <summary>Problem D - Disruptor's Incapacitated Capacitor</summary>
 
+Problem Setter: [Syed Rifat Raiyan](https://codeforces.com/profile/Starscream-11813)<br>
 Estimated Difficulty: 1400  
 Tag(s): Geometry
 
 <details>
-<summary>Hint</summary>
-Hint
+<summary>Hint 1</summary>
+Focus on a single string; all strings behave the same due to symmetry.
+
+</details>
+
+<details>
+<summary>Hint 2</summary>
+After rotation by $\theta$, how far apart are the two attachment points around the rim? Think about the chord length of a circle of radius $r$.
+
+</details>
+
+<details>
+<summary>Hint 3</summary>
+Once you know this lateral distance, combine it with the unknown plate separation $d$ and the known string length $L$ using the Pythagorean theorem in 3D.
+
+</details>
+
+<details>
+<summary>Hint 4</summary>
+Be careful with angle units. Most programming languages expect trigonometric functions to use radians, not degrees.
 
 </details>
 
