@@ -184,11 +184,11 @@ int main()
 <details>
 <summary>Bonus Problem</summary>
 
-Pythagoras has become even more picky and will now only play with right triangluar toys that have an **integer** height. Here, the height of a right triangle means the length of the perpendicular drawn from the right angle to the hypotenuse.
+Pythagoras has become even more picky and will now only play with right triangluar toys that have an **integer height**. Here, the height of a right triangle means the length of the perpendicular drawn from the right angle to the hypotenuse.
 
-For example, in the following figure, $h$ is the height of the triangle:
+For example, in the following figure, the height of the triangle is $h$:
 
-![triangle](./images/altitude.png)
+![triangleHeight](./images/triangleHeight.png)
 
 Now count the number of toys that Pythagoras will buy.
 
