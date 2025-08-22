@@ -180,7 +180,6 @@ int main()
 
 </details>
 </details>
-</details>
 
 <details>
 <summary>Bonus Problem</summary>
@@ -193,4 +192,5 @@ For example, in the following figure, $h$ is the altitude to the hypotenuse:
 
 Now count the number of toys that Pythagoras will buy.
 
+</details>
 </details>
