@@ -136,11 +136,11 @@ Code
 <details>
 <summary>Problem D - Disruptor's Incapacitated Capacitor</summary>
 
-Problem Setter: [Syed Rifat Raiyan](https://codeforces.com/profile/Starscream-11813)<br>
 Estimated Difficulty: 1400  
 Tag(s): Geometry
 
 <details>
+<<<<<<< HEAD
 <summary>Hint 1</summary>
 
 Focus on a single string; all strings behave the same due to symmetry.
@@ -164,6 +164,10 @@ Once you know this lateral distance, combine it with the unknown plate separatio
 <details>
 <summary>Hint 4</summary>
 Be careful with angle units. Most programming languages expect trigonometric functions to use radians, not degrees.
+=======
+<summary>Hint</summary>
+Hint
+>>>>>>> 2445fad690c5b0c6306e5d895d3b82e5179d6144
 
 </details>
 
