@@ -192,7 +192,7 @@ $L^2 = d^2 + 2r^2(1 - \cos\theta)$
 
 Rearranging for $d$, we get,
 
-$\boxed{d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}}$
+$d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}$
 
 This is the required distance between the plates.
 
