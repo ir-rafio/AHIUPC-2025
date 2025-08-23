@@ -40,15 +40,15 @@ LL fct[N], inv[N], invFct[N];
 
 void initFct()
 {
-    fct[0] = 1;
-    for(int i = 1; i < N; i++) fct[i] = (fct[i - 1] * i) % MOD;
+    fct[0] = 1LL;
+    for(LL i = 1; i < N; i++) fct[i] = (fct[i - 1] * i) % MOD;
 }
 
 void initModInv()
 {
-    int i, m, r;
+    LL i, m, r;
 
-    inv[1] = 1;
+    inv[1] = 1LL;
     for(i = 2; i < N; i++)
     {
         m = MOD / i, r = MOD % i;
@@ -61,8 +61,8 @@ void initModInv()
 
 void initInvFct()
 {
-    invFct[0] = 1;
-    for(int i = 1; i < N; i++) invFct[i] = (invFct[i - 1] * inv[i]) % MOD;
+    invFct[0] = 1LL;
+    for(LL i = 1; i < N; i++) invFct[i] = (invFct[i - 1] * inv[i]) % MOD;
 }
 
 LL nCr(int n, int r)
@@ -83,7 +83,7 @@ void pre()
 
 void solve(int tc)
 {
-    int i, n;
+    LL i, n;
     string s;
     cin >> n >> s;
 
@@ -91,7 +91,7 @@ void solve(int tc)
     for(char c: s) freq[c - 'a']++;
 
     LL ans = 1, t;
-    for(auto x: freq) if(x > 0)
+    for(auto x: freq) if(x)
     {
         t = 0;
         for(i = 0; i <= x; i += 2)
@@ -116,7 +116,6 @@ int main()
 
     for(tc = 1; tc <= tt; tc++)
     {
-        // cout << "Case " << tc << ": ";
         solve(tc);
         cout << '\n';
     }
@@ -161,22 +160,18 @@ const LL MOD = 1e9 + 7;
 LL binExp(LL a, LL p)
 {
     if(p == 0) return 1;
-    if(p % 2 == 1) return a * binExp(a, p - 1) % MOD;
+    if(p & 1) return a * binExp(a, p - 1) % MOD;
     return binExp(a * a % MOD, p / 2);
 }
-
-
 
 void pre()
 {
     fastio;
-
-
 }
 
 void solve(int tc)
 {
-    int i, n;
+    LL i, n;
     string s;
     cin >> n >> s;
 
@@ -184,7 +179,7 @@ void solve(int tc)
     for(char c: s) freq[c - 'a']++;
 
     LL ans = 1, t;
-    for(auto x: freq) if(x > 0)
+    for(auto x: freq) if(x)
     {
         ans *= binExp(2, x - 1);
         ans %= MOD;
@@ -202,7 +197,6 @@ int main()
 
     for(tc = 1; tc <= tt; tc++)
     {
-        // cout << "Case " << tc << ": ";
         solve(tc);
         cout << '\n';
     }
@@ -238,7 +232,6 @@ const int N = 1e6 + 5;
 LL pow2[N];
 
 
-
 void pre()
 {
     fastio;
@@ -249,7 +242,7 @@ void pre()
 
 void solve(int tc)
 {
-    int i, n;
+    LL i, n;
     string s;
     cin >> n >> s;
 
@@ -271,7 +264,6 @@ int main()
 
     for(tc = 1; tc <= tt; tc++)
     {
-        // cout << "Case " << tc << ": ";
         solve(tc);
         cout << '\n';
     }
