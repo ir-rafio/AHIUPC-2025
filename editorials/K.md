@@ -27,7 +27,8 @@ To improve this solution to 20 queries, We observe the monotonality of Query ans
 
 <details>
 <summary>Code</summary>
-```
+    
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
