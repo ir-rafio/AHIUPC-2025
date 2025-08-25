@@ -88,4 +88,73 @@ int main()
 
 </details>
 </details>
+
+<details>
+<summary>Alternate Solution</summary>
+
+An easy way to think about this problem is with cylindrical coordinates (polar coordinates with z-axis). Set up the coordinate system to have the centers of the positive and negative plate in the points $(0, 0, 0)$ and $(0, 0, L)$ respectively.
+
+Without loss of generality, let $A(r, 0, 0)$ and $B(r, 0, L)$ be two points connected by a string.  
+After rotating the positive plate by $\theta$, $A$ will go to $A'(r, \theta, z)$.  
+In cartesian coordinates, $A'$ will be $(r\cos\theta, r\sin\theta, z)$.  
+The new distance between the plates is $d = L - z$.
+
+Now, $A'B = AB$  
+$\implies \sqrt{(r\cos\theta - r)^2 + r^2\sin^2\theta + (z - L)^2} = L$  
+$\implies r^2\cos^2\theta + r^2 - 2r^2\cos\theta  + r^2\sin^2\theta + d^2 = L^2$  
+$\implies 2r^2 - 2r^2\cos\theta  + d^2 = L^2$  
+$\implies 2r^2(1 - \cos\theta)  + d^2 = L^2$  
+$\therefore d = \sqrt{L^2 - 2r^2(1 - \cos\theta)}$
+
+<details>
+<summary>Code</summary>
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+#define fastio ios_base::sync_with_stdio(0); cin.tie(0)
+using LL = long long;
+
+long double PI = acosl(-1);
+
+
+
+void pre()
+{
+    fastio;
+
+    cout << fixed << setprecision(7);
+}
+
+void solve(int tc)
+{
+    int r, L, theta;
+    cin >> r >> L >> theta;
+
+    long double thetaRad = theta * PI / 180;
+    long double d = sqrtl(1.0L * L * L - 2.0L * r * r * (1 - cosl(thetaRad)));
+    cout << d;
+}
+
+int main()
+{
+    pre();
+
+    int tc, tt = 1;
+    cin >> tt;
+
+    for(tc = 1; tc <= tt; tc++)
+    {
+        // cout << "Case " << tc << ": ";
+        solve(tc);
+        cout << '\n';
+    }
+
+    return 0;
+}
+```
+
+</details>
+</details>
 </details>
