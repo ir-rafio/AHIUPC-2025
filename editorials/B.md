@@ -7,17 +7,18 @@ Tag(s): Implementation
 <details>
 <summary>Solution</summary>
 
-To convert a number to a Roman numeral, you first need to understand its structure. The key is that Roman numerals, much like the natural number system, are based on **postional value**. If you take a number like $1248$, you think of it as $1000 + 200 + 40 + 8$. The Roman numeral system treats it the same way. The representation for $1000$ is M, for $200$ is CC, for $40$ is XL, and for $8$ is VIII. To get the final Roman numeral, you simply join these parts together: MCCXLVIII.
+To convert a number to a Roman numeral, you first need to understand the structure. The key is that Roman numerals, much like the natural number system, are based on **postional value**.  
+If you take a number like $1248$, you think of it as $1000 + 200 + 40 + 8$. The Roman numeral system treats it the same way. The representation for $1000$ is M, for $200$ is CC, for $40$ is XL, and for $8$ is VIII. To get the final Roman numeral, you simply join these parts together: MCCXLVIII.
 
-Each digit in a number corresponds to a specific Roman numeral substring. The substring for a digit '2' in the hundreds place (CC) is different from a '2' in the tens place (XX), so the digit's position is just as important as its value. The final result is always the **concatenation** of these substrings, from the largest postional value to the smallest.
+Each digit in a number corresponds to a specific Roman numeral substring. This substring for the digit depends just on its value and position. The final result is always the **concatenation** of these substrings, from the largest postional value to the smallest.
 
-Interestingly, the **pattern** for forming the numeral for any digit from 1 to 9 is universal. It just uses a different set of symbols depending on the postional value. For any given position (ones, tens, hundreds), you can identify a "one" symbol (I, X, C), a "five" symbol (V, L, D), and the "next one" symbol (X, C, M). This consistent pattern is what you can exploit in an algorithm.
+Interestingly, the **pattern** for forming the numeral for any digit from 1 to 9 is universal. It just uses a different set of symbols depending on the positional value. For any given position (ones, tens, hundreds), you can identify a "one" symbol (I, X, C), a "five" symbol (V, L, D), and the "next one" symbol (X, C, M).
 
-The algorithm can process the input number one digit at a time, from left to right (thousands, then hundreds, and so on). The core of this process is a reusable procedure that can convert any single digit from 0-9 into its Roman numeral substring, given its postional value.
+You can process the input number one digit at a time, from left to right (thousands, then hundreds, and so on). The core of this process is a reusable function that can convert any single digit from 0-9 into its Roman numeral substring, given its postional value.
 
 The logic for converting a single digit can be broken down into three distinct types of cases.
 
-1. **The Subtractive Cases**: Digits 4 and 9 are special. They are formed by placing a smaller unit symbol before a larger one. For example, 4 is the "one" symbol before the "five" symbol (like IV or XL), and 9 is the "one" symbol before the "next one" symbol (like IX or XC). These are straightforward, one-step rules.
+1. **The Subtractive Cases**: Digits 4 and 9 are special. They are formed by placing a "one" symbol to represent subtraction.
 
 2. **The Additive Cases**: Digits 1, 2, and 3 are the simplest. They are formed by repeating the "one" symbol for that postional value one, two, or three times (e.g., III or XXX).
 
@@ -158,7 +159,6 @@ int main()
 
 </details>
 </details>
-
 
 <details>
 <summary>Bonus Problem</summary>
