@@ -1,3 +1,4 @@
+<details>
 <summary>Problem D - Disruptor's Incapacitated Capacitor</summary>
 
 Problem Setter: [Syed Rifat Raiyan](https://codeforces.com/profile/Starscream-11813)  
@@ -94,5 +95,6 @@ int main()
 }
 ```
 
+</details>
 </details>
 </details>
