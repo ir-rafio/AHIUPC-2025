@@ -5,7 +5,13 @@ Tag(s): Implementation
 
 <details>
 <summary>Solution</summary>
-The Solution is *obvious* and needs no heuristics. Implementation can be done both recursively and iteratively.
+The main observation required is: Each digit of a number directly maps to a substring of the Roman numeral representation.
+
+The mapping depends on both the digit’s value and its positional place (ones, tens, hundreds, thousands, etc.). For example:
+- The digit 9 in hundreds place maps to "CM".
+- The digit 6 in tens place maps to "LX".
+
+To form the complete Roman numeral, we simply concatenate the Roman substrings for each digit from left to right, according to their position.
 
 <details>
 <summary>Code</summary>
